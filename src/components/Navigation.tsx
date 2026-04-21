@@ -1,37 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { Menu, X, Sun, Moon } from "lucide-react";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState(true);
-
-  useEffect(() => {
-    // Check system preference or saved preference
-    const savedMode = localStorage.getItem("darkMode");
-    if (savedMode !== null) {
-      setDarkMode(savedMode === "true");
-    } else {
-      const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      setDarkMode(systemPrefersDark);
-    }
-  }, []);
-
-  useEffect(() => {
-    // Apply dark mode class to document
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-    // Save preference
-    localStorage.setItem("darkMode", darkMode.toString());
-  }, [darkMode]);
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
 
   const navItems = [
     { name: "Home", href: "#" },
@@ -66,17 +39,8 @@ export default function Navigation() {
             </div>
           </div>
 
-          {/* Dark Mode Toggle and Mobile menu button */}
+          {/* Mobile menu button */}
           <div className="flex items-center">
-            <button
-              onClick={toggleDarkMode}
-              className="p-2 rounded-full text-gray-300 hover:text-cyan-400 focus:outline-none mr-4"
-              aria-label="Toggle dark mode"
-            >
-              {darkMode ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
-
-            {/* Mobile menu button */}
             <div className="md:hidden flex items-center">
               <button
                 onClick={() => setIsOpen(!isOpen)}

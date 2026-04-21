@@ -109,12 +109,19 @@ export default function Hero() {
         </p>
 
         <div className="flex flex-wrap justify-center gap-4 mb-16">
-          <button className="px-8 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:-translate-y-1">
+          <a
+            href="#projects"
+            className="px-8 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:-translate-y-1"
+          >
             View Projects
-          </button>
-          <button className="px-8 py-3 border-2 border-cyan-600 text-cyan-400 hover:bg-cyan-600 hover:text-white font-semibold rounded-lg transition-all duration-300">
+          </a>
+          <a
+            href="/Dhruv-Panchal-Resume.txt"
+            download="Dhruv-Panchal-Resume.txt"
+            className="px-8 py-3 border-2 border-cyan-600 text-cyan-400 hover:bg-cyan-600 hover:text-white font-semibold rounded-lg transition-all duration-300"
+          >
             Download Resume
-          </button>
+          </a>
         </div>
 
         <div className="bg-gray-800 bg-opacity-50 rounded-lg p-6 max-w-2xl mx-auto backdrop-blur-sm border border-gray-700">
