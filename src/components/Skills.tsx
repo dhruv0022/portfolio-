@@ -113,9 +113,6 @@ export default function Skills() {
               <p className="text-gray-300 mb-4">
                 Validated expertise in cloud infrastructure, security, and compliance on the AWS platform.
               </p>
-              <div className="inline-block bg-gray-800 px-4 py-2 rounded-lg">
-                <span className="font-mono text-sm">Certificate ID: AWSCPC-2024-XXXXXX</span>
-              </div>
             </div>
           </div>
         </motion.div>
